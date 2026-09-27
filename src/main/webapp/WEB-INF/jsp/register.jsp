@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>ShopMilk | Đăng ký</title>
+    <title>ShopTruyen | Đăng ký</title>
     <!-- Include Global Tailwind Config -->
     <jsp:include page="website/head.jsp" />
 </head>
@@ -18,7 +18,7 @@
     <div class="relative z-10 w-full max-w-lg p-8 m-4 bg-white/80 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl">
         <div class="text-center mb-8">
             <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Tạo tài khoản</h2>
-            <p class="text-gray-500 mt-2 text-sm">Tham gia cùng hàng ngàn khách hàng của ShopMilk</p>
+            <p class="text-gray-500 mt-2 text-sm">Tham gia cùng hàng ngàn khách hàng của ShopTruyen</p>
         </div>
         
         <c:if test="${not empty message}">

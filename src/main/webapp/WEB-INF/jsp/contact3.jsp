@@ -3,38 +3,7 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<title>Shop Milk | Home</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<!--Custom Theme files -->
-<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="static/css/flexslider.css" type="text/css" media="screen" />
-<!--//Custom Theme files -->
-<!--js-->
-<script src="static/js/jquery-1.11.1.min.js"></script>
-<script src="static/js/modernizr.custom.js"></script>
-<!--//js-->
-<!--animation-effect-->
-<link href="static/css/animate.min.css" rel="stylesheet"> 
-<script src="static/js/wow.min.js"></script>
-	<script>
-	 new WOW().init();
-	</script>
-<!--//animation-effect-->
-<!--start-smooth-scrolling-->
-<script type="text/javascript" src="static/js/move-top.js"></script>
-<script type="text/javascript" src="static/js/easing.js"></script>	
-<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
-</script>
-<!--//end-smooth-scrolling-->
-</head>
+<head><title>ShopTruyen | Góc đọc truyện</title><jsp:include page="website/head.jsp" /></head>
 <body>
 	<!-- header -->
 	<jsp:include page="website/header.jsp" />

@@ -2,9 +2,9 @@
 
 <header class="main-header">
 	<!-- Logo -->
-	<a href="${pageContext.request.contextPath}/home.html" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
+	<a href="${pageContext.request.contextPath}/admin" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
 		<span class="logo-mini"><b>SM</b></span> <!-- logo for regular state and mobile devices -->
-		<span class="logo-lg"><b>Shop</b>Milk</span>
+		<span class="logo-lg"><b>Shop</b>Truyen</span>
 	</a>
 	<!-- Header Navbar: style can be found in header.less -->
 	<nav class="navbar navbar-static-top">
@@ -192,7 +192,7 @@
 				<li class="dropdown user user-menu"><a href="#"
 					class="dropdown-toggle" data-toggle="dropdown"> <img
 						src="/static/admin/img/avatar04.png" class="user-image"
-						> <span class="hidden-xs">Nhóm 3</span>
+						> <span class="hidden-xs">Nhóm 8</span>
 				</a>
 					<ul class="dropdown-menu">
 						<!-- User image -->

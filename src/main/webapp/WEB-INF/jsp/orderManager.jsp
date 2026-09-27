@@ -451,7 +451,7 @@
     </section>
 
     <footer style="border-top: 1px solid #d2d6de; text-align: center; background: #fff; color: #444; height: 50px; line-height: 50px;">
-      <strong>Copyright &copy; 2024 | ShopMilk Admin</strong>
+      <strong>Copyright &copy; 2024 | ShopTruyen Admin</strong>
     </footer>
   </div>
 

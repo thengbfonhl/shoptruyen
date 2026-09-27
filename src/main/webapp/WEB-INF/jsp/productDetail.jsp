@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chi tiết Sản phẩm | Shop Milk</title>
+    <title>Chi tiết Sản phẩm | ShopTruyen</title>
     <jsp:include page="website/head.jsp" />
   </head>
   <body>

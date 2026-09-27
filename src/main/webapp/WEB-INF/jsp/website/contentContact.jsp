@@ -30,9 +30,9 @@
             <div class="w-full lg:w-1/2 animate__animated animate__fadeInRight space-y-10 lg:pl-10">
                 <div class="space-y-4 text-center lg:text-left">
                     <h3 class="text-3xl font-bold text-slate-800 tracking-tight">
-                        <span class="text-primary-600">Shop Milk</span> - Vì Sức Khỏe Cộng Đồng
+                        <span class="text-primary-600">ShopTruyen</span> - Mở Trang Sách, Mở Thế Giới
                     </h3>
-                    <p class="text-slate-500 font-light italic">Sứ mệnh mang dòng sữa sạch đến mọi gia đình.</p>
+                    <p class="text-slate-500 font-light italic">Mang những câu chuyện thú vị đến với mọi độc giả.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
@@ -54,7 +54,7 @@
                         </div>
                         <div>
                             <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">Điện thoại</p>
-                            <p class="text-slate-700 font-bold text-lg">0396 275 692</p>
+                            <p class="text-slate-700 font-bold text-lg">090 0990 0009</p>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@
                         </div>
                         <div>
                             <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">Email</p>
-                            <p class="text-slate-700 font-medium">nhom4@gmail.com</p>
+                            <p class="text-slate-700 font-medium">nhom8@gmail.com</p>
                         </div>
                     </div>
                 </div>

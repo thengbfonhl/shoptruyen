@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<section class="py-12 lg:py-20 bg-milk min-h-screen">
+<section class="py-12 lg:py-20 bg-paper min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Main Product Section -->
@@ -39,10 +39,10 @@
                     <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-700 ease-in-out mix-blend-multiply">
                         <c:choose>
                             <c:when test="${not empty product.image}">
-                                <img src="${product.image}" onerror="this.onerror=null; this.src='https://cdn-files.hacom.vn/hacom/cdn/web/16042026/sua-bot-ensure-gold-vani-lon-400g-202104230836132948.jpg'" class="object-contain w-full h-full" alt="${product.name}">
+                                <img src="${product.image}" onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/static/images/comics/placeholder.svg'" class="object-contain w-full h-full" alt="${product.name}">
                             </c:when>
                             <c:otherwise>
-                                <img src="https://cdn-files.hacom.vn/hacom/cdn/web/16042026/sua-bot-ensure-gold-vani-lon-400g-202104230836132948.jpg" class="object-contain w-full h-full" alt="${product.name}">
+                                <img src="${pageContext.request.contextPath}/static/images/comics/placeholder.svg" class="object-contain w-full h-full" alt="${product.name}">
                             </c:otherwise>
                         </c:choose>
                     </div>
@@ -66,7 +66,7 @@
                         ${product.name}
                     </h1>
                     <div class="text-3xl font-black text-brand-DEFAULT mb-6">
-                        ${product.price} <span class="text-xl font-bold text-gray-400 ml-1 line-through">650.000đ</span>
+                        ${product.price}đ
                     </div>
 
                     <!-- Description -->
@@ -119,15 +119,15 @@
         <div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 p-8 lg:p-12">
             <!-- Simulated Tabs Header -->
             <div class="flex flex-wrap gap-8 border-b border-gray-100 pb-4 mb-8">
-                <button class="text-brand-DEFAULT font-bold text-lg border-b-2 border-brand-DEFAULT pb-4 -mb-[18px]">Mô Tả Sản Phẩm</button>
-                <button class="text-gray-400 font-medium text-lg hover:text-gray-600 transition-colors pb-4">Thông tin dưỡng chất</button>
+                <button class="text-brand-DEFAULT font-bold text-lg border-b-2 border-brand-DEFAULT pb-4 -mb-[18px]">Giới Thiệu Truyện</button>
+                <button class="text-gray-400 font-medium text-lg hover:text-gray-600 transition-colors pb-4">Thông tin truyện</button>
                 <button class="text-gray-400 font-medium text-lg hover:text-gray-600 transition-colors pb-4">Đánh giá & Nhận xét</button>
             </div>
             
             <!-- Tab Content -->
             <div class="prose prose-brand max-w-none text-gray-600 leading-relaxed">
                 <p>${product.description}</p>
-                <p class="mt-4">Sản phẩm được tối ưu hóa thành phần tốt nhất cho sự tiêu hóa và hấp thụ của cơ thể. Phù hợp cho nhiều lứa tuổi và hỗ trợ phát triển bền vững hệ miễn dịch.</p>
+                <p class="mt-4">Giữ truyện ở nơi khô ráo, tránh ánh nắng trực tiếp và dùng dấu trang để bảo vệ các trang sách.</p>
             </div>
         </div>
 

@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<section class="py-12 lg:py-20 bg-milk min-h-screen">
+<section class="py-12 lg:py-20 bg-paper min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row gap-8">
             
@@ -79,10 +79,10 @@
                                         <a href="productDetail?cateID=${product.category.id}&productID=${product.id}">
                                             <c:choose>
                                                 <c:when test="${not empty product.image}">
-                                                    <img src="${product.image}" onerror="this.onerror=null; this.src='https://cdn-files.hacom.vn/hacom/cdn/web/16042026/sua-bot-ensure-gold-vani-lon-400g-202104230836132948.jpg'" class="object-contain w-full h-full p-4 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" alt="${product.name}" />
+                                                    <img src="${product.image}" onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/static/images/comics/placeholder.svg'" class="object-contain w-full h-full p-4 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" alt="${product.name}" />
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <img src="https://cdn-files.hacom.vn/hacom/cdn/web/16042026/sua-bot-ensure-gold-vani-lon-400g-202104230836132948.jpg" class="object-contain w-full h-full p-4 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" alt="${product.name}" />
+                                                    <img src="${pageContext.request.contextPath}/static/images/comics/placeholder.svg" class="object-contain w-full h-full p-4 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" alt="${product.name}" />
                                                 </c:otherwise>
                                             </c:choose>
                                         </a>

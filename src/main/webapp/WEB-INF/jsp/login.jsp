@@ -8,7 +8,7 @@ pageEncoding="UTF-8"%>
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>ShopMilk | Đăng nhập</title>
+    <title>ShopTruyen | Đăng nhập</title>
     <!-- Include Global Tailwind Config -->
     <jsp:include page="website/head.jsp" />
   </head>
@@ -31,7 +31,7 @@ pageEncoding="UTF-8"%>
           Chào mừng quay lại
         </h2>
         <p class="text-gray-500 mt-2 text-sm">
-          Đăng nhập để tiếp tục mua sắm cùng ShopMilk
+          Đăng nhập để tiếp tục mua sắm cùng ShopTruyen
         </p>
       </div>
 

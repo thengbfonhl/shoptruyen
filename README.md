@@ -1,6 +1,6 @@
-# ShopMilk - Website Bán Sữa
+# ShopTruyen - Website Bán Truyện
 
-Dự án này là một ứng dụng Web bán sữa được xây dựng bằng Spring Boot, sử dụng JSP cho giao diện và MySQL làm cơ sở dữ liệu.
+Dự án này là một ứng dụng Web bán truyện được xây dựng bằng Spring Boot, sử dụng JSP cho giao diện và MySQL làm cơ sở dữ liệu.
 
 ## Công nghệ sử dụng
 - **Backend:** Java 11, Spring Boot 2.7.18
@@ -10,14 +10,14 @@ Dự án này là một ứng dụng Web bán sữa được xây dựng bằng 
 
 ## Yêu cầu hệ thống
 - JDK 11
-- MySQL Server (đã tạo database tên `shopmilk`)
+- MySQL Server (đã tạo database tên `shoptruyen`)
 - IDE (IntelliJ IDEA, Eclipse, VS Code,...)
 
 ## Cấu hình hệ thống
 Trước khi chạy ứng dụng, hãy đảm bảo bạn đã cấu hình cơ sở dữ liệu trong file `src/main/resources/application.properties`:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/shopmilk?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.url=jdbc:mysql://localhost:3306/shoptruyen?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 spring.datasource.username=root
 spring.datasource.password=your_password_here
 ```
@@ -40,7 +40,7 @@ spring.datasource.password=your_password_here
     `http://localhost:9090`
 
 ## Các tính năng chính
-- Xem danh sách sản phẩm sữa.
+- Xem danh sách truyện.
 - Chi tiết sản phẩm.
 - Đăng ký/Đăng nhập tài khoản.
 - Quản lý giỏ hàng và thanh toán.

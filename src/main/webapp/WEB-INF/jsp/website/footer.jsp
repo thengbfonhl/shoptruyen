@@ -8,15 +8,15 @@
         <a href="${pageContext.request.contextPath}/home" class="inline-block">
           <span
             class="text-3xl font-extrabold tracking-tight text-brand-DEFAULT"
-            >Shop<span class="text-white">Milk</span></span
+            >Shop<span class="text-white">Truyen</span></span
           >
         </a>
         <p class="text-sm text-gray-400 max-w-xs leading-relaxed">
-          Đồng hành cùng sự phát triển của gia đình bạn. Chuyên cung cấp các
-          loại sữa nội & ngoại nhập chất lượng cao. Vì sức khỏe cộng đồng.
+          Đồng hành cùng niềm vui đọc sách của bạn. Khám phá các
+          bộ manga và truyện tranh yêu thích tại ShopTruyen.
         </p>
         <p class="text-xs text-gray-500 pt-4">
-          Shop Milk &copy; 2026 | Designed with ❤️ by Nhóm 3
+          ShopTruyen &copy; 2026 | Designed with ❤️ by Nhóm 8
         </p>
       </div>
 
@@ -24,14 +24,14 @@
       <div class="space-y-4">
         <h4 class="text-lg font-semibold text-white tracking-wide">Danh Mục</h4>
         <ul class="space-y-2">
-          <li>
+          <!-- <li>
             <a
               href="${pageContext.request.contextPath}/about.html"
               class="text-sm text-gray-400 hover:text-brand-light transition-colors flex items-center pr-2"
               ><i class="ph ph-caret-right mr-2 text-brand-DEFAULT"></i> Giới
               Thiệu</a
             >
-          </li>
+          </li> -->
           <li>
             <a
               href="${pageContext.request.contextPath}/allProduct"
@@ -42,20 +42,20 @@
           </li>
           <li>
             <a
-              href="${pageContext.request.contextPath}/contact.html"
+              href="${pageContext.request.contextPath}/contact"
               class="text-sm text-gray-400 hover:text-brand-light transition-colors flex items-center pr-2"
               ><i class="ph ph-caret-right mr-2 text-brand-DEFAULT"></i> Liên
               Hệ</a
             >
           </li>
-          <li>
+          <!-- <li>
             <a
               href="${pageContext.request.contextPath}/checkout.html"
               class="text-sm text-gray-400 hover:text-brand-light transition-colors flex items-center pr-2"
               ><i class="ph ph-caret-right mr-2 text-brand-DEFAULT"></i> Dịch
               Vụ</a
             >
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -65,7 +65,7 @@
           Nhận Thông Báo
         </h4>
         <p class="text-sm text-gray-400">
-          Đăng ký để nhận các chương trình khuyến mãi và kiến thức dinh dưỡng
+          Đăng ký để nhận các chương trình khuyến mãi và gợi ý truyện hay
           mới nhất.
         </p>
         <form action="#" class="mt-4 sm:flex sm:max-w-md">

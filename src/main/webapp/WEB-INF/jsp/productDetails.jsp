@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Shop Milk | Product</title>
+<title>ShopTruyen | Product</title>
 <meta charset="utf-8" />
 <!--Custom Theme files -->
 <link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />

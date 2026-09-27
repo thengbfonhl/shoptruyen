@@ -85,7 +85,7 @@
     <h1 style="color:#fff; font-size:20px; font-weight:700; margin:0;">
       <i class="fa fa-dashboard" style="color:#4fc3f7; margin-right:8px;"></i>
       Dashboard
-      <small style="font-size:13px; color:#90caf9; font-weight:400; margin-left:8px;">Tổng quan hệ thống ShopMilk</small>
+      <small style="font-size:13px; color:#90caf9; font-weight:400; margin-left:8px;">Tổng quan hệ thống ShopTruyen</small>
     </h1>
     <ol class="breadcrumb" style="background:transparent; margin:4px 0 0; padding:0;">
       <li><a href="/admin" style="color:#90caf9;"><i class="fa fa-home"></i> Trang Chủ</a></li>

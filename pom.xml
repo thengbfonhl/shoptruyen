@@ -9,8 +9,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>ShopMilk</name>
-    <description>Shop Milk</description>
+    <name>ShopTruyen</name>
+    <description>Cửa hàng truyện tranh</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

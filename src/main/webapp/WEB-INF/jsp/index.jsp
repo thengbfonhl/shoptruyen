@@ -4,7 +4,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shop Milk | Home</title>
+    <title>ShopTruyen | Home</title>
     <jsp:include page="website/head.jsp" />
     <style>
       /* Hide minicart popup on home screen */

@@ -4,7 +4,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shop Milk | All Products</title>
+    <title>ShopTruyen | All Products</title>
     <jsp:include page="website/head.jsp" />
   </head>
   <body>

@@ -25,7 +25,7 @@
           sans: ["Outfit", "sans-serif"],
         },
         colors: {
-          milk: "#F9FAFB" /* very light cool gray for clean contrast */,
+          paper: "#F9FAFB" /* very light cool gray for clean contrast */,
           brand: {
             light: "#DBEAFE",
             DEFAULT: "#2563EB" /* Professional Blue */,
@@ -41,7 +41,7 @@
 <style>
   body {
     font-family: "Outfit", sans-serif;
-    background-color: theme("colors.milk");
+    background-color: theme("colors.paper");
     color: theme("colors.dark");
     margin: 0;
     padding: 0;

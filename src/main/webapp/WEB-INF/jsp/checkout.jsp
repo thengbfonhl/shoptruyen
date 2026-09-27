@@ -5,7 +5,7 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shop Milk | Đặt Hàng</title>
+    <title>ShopTruyen | Đặt Hàng</title>
     <jsp:include page="website/head.jsp" />
     <link
       href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
@@ -39,10 +39,39 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
         font-weight: 700;
         color: #2563eb;
       }
+      #cartDetail td:nth-child(2):not([colspan]) {
+        width: 100%;
+        min-width: 120px;
+        padding-left: .75rem;
+        padding-right: .75rem;
+        overflow-wrap: anywhere;
+      }
+      #cartDetail td:nth-child(1):not([colspan]),
+      #cartDetail td:nth-child(4) {
+        width: 1%;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        white-space: nowrap;
+      }
+      #cartDetail td:nth-child(5) {
+        width: 1%;
+        padding-left: .25rem;
+        padding-right: .25rem;
+        text-align: center;
+        white-space: nowrap;
+      }
+      #cartDetail td:nth-child(5) button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 36px;
+        padding: 0;
+      }
     </style>
   </head>
   <body
-    class="bg-milk font-sans selection:bg-brand-DEFAULT selection:text-white"
+    class="bg-paper font-sans selection:bg-brand-DEFAULT selection:text-white"
   >
     <!-- header -->
     <jsp:include page="website/header.jsp" />
@@ -100,10 +129,11 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
                   >
                   <form:input
                     path="customerName"
-                    id="customerName"
+                    id="customerName" aria-describedby="customerNameError" aria-invalid="false"
                     placeholder="Nhập họ và tên..."
                     class="w-full bg-gray-50 border border-gray-200 text-gray-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-DEFAULT/50 focus:bg-white transition-colors"
                   />
+                  <p id="customerNameError" class="mt-2 text-sm text-red-600" aria-live="polite" hidden></p>
                 </div>
                 <div>
                   <label class="block text-sm font-bold text-gray-700 mb-2"
@@ -113,9 +143,10 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
                     path="phoneNumber"
                     id="phoneNumber"
                     placeholder="Nhập số điện thoại..."
-                    maxlength="10"
+                    type="tel" inputmode="numeric" autocomplete="tel" aria-describedby="phoneNumberError" aria-invalid="false"
                     class="w-full bg-gray-50 border border-gray-200 text-gray-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-DEFAULT/50 focus:bg-white transition-colors"
                   />
+                  <p id="phoneNumberError" class="mt-2 text-sm text-red-600" aria-live="polite" hidden></p>
                 </div>
               </div>
 
@@ -125,13 +156,15 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
                 >
                 <form:textarea
                   path="address"
-                  id="address"
+                  id="address" aria-describedby="addressError" aria-invalid="false"
                   placeholder="Nhập địa chỉ nhận hàng chi tiết..."
                   rows="3"
                   class="w-full bg-gray-50 border border-gray-200 text-gray-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-DEFAULT/50 focus:bg-white transition-colors"
                 />
+                  <p id="addressError" class="mt-2 text-sm text-red-600" aria-live="polite" hidden></p>
               </div>
 
+              <div id="cartFields"></div>
               <form:input id="orderTotal" type="hidden" path="total" />
               <input
                 id="noProductInCart"
@@ -221,7 +254,7 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
                   </td>
                   <td class="py-3 px-4 border-r border-gray-100">Tên SP</td>
                   <td class="py-3 px-4 border-r border-gray-100">Giá</td>
-                  <td class="py-3 px-4 text-center w-16 rounded-tr-xl">SL</td>
+                  <td class="py-3 px-4 text-center w-16">SL</td><td class="py-3 px-4"><span class="sr-only">Thao tác</span></td>
                 </tr>
                 <!-- JS appends items here -->
               </table>
@@ -256,71 +289,7 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
     <!--smooth-scrolling-of-move-up-->
 
     <script src="static/js/Order.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $(".scroll").click(function (event) {
-          event.preventDefault();
-          $("html,body").animate(
-            { scrollTop: $(this.hash).offset().top },
-            1000,
-          );
-        });
-        var items = paypal.minicart.cart.items(),
-          cartTotal = paypal.minicart.cart.total(),
-          productPrice = 0,
-          quantity = 0;
-
-        // Cập nhật badge
-        if (typeof updateCartBadge === 'function') updateCartBadge();
-
-        if (items.length > 0) {
-          for (var i = 0; i < items.length; i++) {
-            quantity = items[i].get("quantity");
-            productPrice = items[i].get("amount");
-            var formattedPrice = Number(productPrice).toLocaleString("vi-VN");
-
-            document.getElementById("cartDetail").innerHTML +=
-              "<tr> <td>" +
-              (i + 1) +
-              "</td> <td>" +
-              items[i].get("item_name") +
-              "</td> <td>" +
-              formattedPrice +
-              " đ</td> <td>" +
-              quantity +
-              "</td> </tr>";
-
-            document.getElementById("orderForm").innerHTML +=
-              '<input type="hidden" value="' +
-              items[i].get("item_name") +
-              '" name="productName' +
-              (i + 1) +
-              '" />' +
-              '<input type="hidden" value="' +
-              quantity +
-              '" name="productQuantity' +
-              (i + 1) +
-              '" />';
-          }
-
-          var noProductInCart = document.getElementById("noProductInCart");
-          if (noProductInCart) {
-            noProductInCart.value = items.length;
-          }
-        }
-
-        var mainCartTotal = document.getElementById("TotalCart");
-        if (mainCartTotal) {
-          mainCartTotal.innerHTML =
-            Number(cartTotal).toLocaleString("vi-VN") + " đ";
-        }
-
-        var orderTotalInput = document.getElementById("orderTotal");
-        if (orderTotalInput) {
-          orderTotalInput.value = cartTotal;
-        }
-      });
-    </script>
+    <script src="${pageContext.request.contextPath}/static/js/checkout.js"></script>
   </body>
 
   <!--//smooth-scrolling-of-move-up-->
@@ -340,26 +309,9 @@ uri="http://www.springframework.org/tags/form" prefix="form"%>
 
     //function datHang có toarst thông báo thành công
     function datHang() {
-      var customerName = document.getElementById("customerName").value;
-      var phoneNumber = document.getElementById("phoneNumber").value;
-      var address = document.getElementById("address").value;
-      var orderTotal = Number.parseInt(
-        document.getElementById("orderTotal").value,
-      );
+      if (!validateOrderFields()) return;
 
-      if (customerName == "") {
-        toastr.error("Họ Tên không được để trống");
-        return;
-      }
-      if (phoneNumber == "") {
-        toastr.error("Số điện thoại không được để trống");
-        return;
-      }
-      if (address == "") {
-        toastr.error("Địa chỉ không được để trống");
-        return;
-      }
-
+      if (!paypal.minicart.cart.items().length) { toastr.error("Giỏ hàng đang trống"); return; }
       $.ajax({
         url: "/order",
         method: "post",

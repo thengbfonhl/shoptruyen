@@ -9,8 +9,8 @@
             <!-- Logo Section -->
             <div class="flex-shrink-0 flex items-center cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-transform">
                 <a href="${pageContext.request.contextPath}/home" class="flex flex-col">
-                    <span class="text-3xl font-extrabold tracking-tight text-brand-DEFAULT">Shop<span class="text-dark">Milk</span></span>
-                    <span class="text-xs text-gray-500 tracking-widest font-medium uppercase mt-0.5">Vì sức khỏe cộng đồng</span>
+                    <span class="text-3xl font-extrabold tracking-tight text-brand-DEFAULT">Shop<span class="text-dark">Truyen</span></span>
+                    <span class="text-xs text-gray-500 tracking-widest font-medium uppercase mt-0.5">Mở trang sách, mở thế giới</span>
                 </a>
             </div>
 
@@ -43,8 +43,8 @@
                     <!-- Dropdown Menu -->
                     <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 w-48">
                         <div class="bg-white/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl overflow-hidden p-2">
-                            <a href="${pageContext.request.contextPath}/khuyenmai.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-DEFAULT rounded-xl transition-colors">Khuyến Mại</a>
-                            <a href="${pageContext.request.contextPath}/dinhduong.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-DEFAULT rounded-xl transition-colors">Dinh Dưỡng</a>
+                            <a href="${pageContext.request.contextPath}/khuyenmai" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-DEFAULT rounded-xl transition-colors">Khuyến Mại</a>
+                            <a href="${pageContext.request.contextPath}/goc-doc-truyen" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-DEFAULT rounded-xl transition-colors">Góc Đọc Truyện</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <!-- Dropdown Menu -->
                     <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 w-48">
                         <div class="bg-white/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl overflow-hidden p-2">
-                            <a href="${pageContext.request.contextPath}/contact.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-DEFAULT rounded-xl transition-colors">Thông Tin</a>
+                            <a href="${pageContext.request.contextPath}/contact" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-DEFAULT rounded-xl transition-colors">Thông Tin</a>
                             <a href="https://www.facebook.com/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-DEFAULT rounded-xl transition-colors">Facebook</a>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                     <div class="absolute right-0 top-full mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                         <div class="bg-white/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl p-3">
                             <form action="${pageContext.request.contextPath}/search" method="get" class="flex gap-2">
-                                <input id="autocomplete" type="text" name="searchValue" placeholder="Tìm phẩm..." class="w-full bg-gray-50 border border-gray-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-DEFAULT/50 transition-shadow">
+                                <input id="autocomplete" type="text" name="searchValue" placeholder="Tìm tên truyện..." class="w-full bg-gray-50 border border-gray-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-DEFAULT/50 transition-shadow">
                                 <button type="submit" class="bg-brand-DEFAULT text-white px-4 py-2.5 rounded-xl hover:bg-brand-dark transition-colors"><i class="ph ph-magnifying-glass font-bold"></i></button>
                             </form>
                         </div>
@@ -143,6 +143,6 @@
 <!-- Custom AutoComplete minimal logic instead of old jQuery UI -->
 <script>
     // Lightweight auto-complete implementation for a modern look
-    const tags = ["Sữa Vinamilk", "Sữa TH True Milk", "Sữa Nutifood", "Sữa Nestle", "Sữa Ensure"];
+    const tags = ["Doraemon", "Shin", "Conan", "One Piece", "Naruto", "Truyện phiêu lưu", "Truyện trinh thám"];
     // (Could implement custom dropdown UI here if requested)
 </script>

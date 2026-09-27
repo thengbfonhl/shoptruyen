@@ -130,8 +130,24 @@ public class mainController {
 	@PostMapping("/order")
 	public org.springframework.http.ResponseEntity<String> addOrder(@ModelAttribute("orderForm") Order order,
 			ModelMap model, HttpServletRequest request) {
-		// Validate cart & stock BEFORE creating the order
+		if (order.getPhoneNumber() == null || !order.getPhoneNumber().matches("0[0-9]{9}")) {
+            return org.springframework.http.ResponseEntity.badRequest().body("Số điện thoại phải gồm đúng 10 chữ số và bắt đầu bằng 0.");
+        }
+        String customerName = order.getCustomerName() == null ? "" : order.getCustomerName().strip();
+        String address = order.getAddress() == null ? "" : order.getAddress().strip();
+        if (customerName.length() < 2 || customerName.length() > 50
+                || !customerName.matches("[\\p{L}\\p{M}]+(?:[ '’.-][\\p{L}\\p{M}]+)*")) {
+            return org.springframework.http.ResponseEntity.badRequest().body("Họ tên phải từ 2 đến 50 ký tự, không chứa số hoặc ký tự không hợp lệ.");
+        }
+        if (address.length() < 10 || address.length() > 255
+                || !java.util.regex.Pattern.compile("[\\p{L}\\p{N}]").matcher(address).find()) {
+            return org.springframework.http.ResponseEntity.badRequest().body("Địa chỉ phải từ 10 đến 255 ký tự và không chỉ gồm ký tự đặc biệt.");
+        }
+        order.setCustomerName(customerName);
+        order.setAddress(address);
+        // Validate cart & stock BEFORE creating the order
 		int noProduct = Integer.parseInt(request.getParameter("noProductInCart"));
+        if (noProduct <= 0) return org.springframework.http.ResponseEntity.badRequest().body("Giỏ hàng đang trống");
 		for (int i = 1; i <= noProduct; i++) {
 			Product product = productService.findByName(request.getParameter("productName" + i));
 			if (product == null) {
@@ -180,7 +196,7 @@ public class mainController {
 		return "contact2";
 	}
 
-	@GetMapping("/dinhduong")
+	@GetMapping({"/goc-doc-truyen", "/dinhduong"})
 	public String dinhduong() {
 		return "contact3";
 	}
