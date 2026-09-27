@@ -1,4 +1,4 @@
-<%@page import="com.shopmilk.entities.User"%>
+<%@page import="com.shoptruyen.entities.User"%>
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 

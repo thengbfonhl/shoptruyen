@@ -6,7 +6,7 @@ import java.sql.Statement;
 public class QueryDB {
     public static void main(String[] args) {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopmilk?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shoptruyen?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true", "root", "");
             Statement stmt = conn.createStatement();
             
             // Get schema

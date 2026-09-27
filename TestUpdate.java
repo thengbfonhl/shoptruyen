@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 public class TestUpdate {
     public static void main(String[] args) {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopmilk?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shoptruyen?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true", "root", "");
             PreparedStatement stmt = conn.prepareStatement(
                 "UPDATE product SET name=?, price=?, quantity=?, cate_id=?, image=? WHERE id=?"
             );
